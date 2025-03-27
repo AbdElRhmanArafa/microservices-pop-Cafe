@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors")
@@ -17,6 +18,13 @@ app.set("view engine", "html")
 app.set("views", __dirname + "/views")
 app.use(express.static('public'));
 app.use(favicon(__dirname + "/public/img/favicon.ico"));
+
+console.log("Environment Variables:");
+console.log("APP_HOST:", process.env.APP_HOST);
+console.log("APP_DB_USER:", process.env.APP_DB_USER);
+console.log("APP_DB_PASSWORD:", process.env.APP_DB_PASSWORD);
+console.log("APP_DB_NAME:", process.env.APP_DB_NAME);
+console.log("APP_PORT:", process.env.APP_PORT);
 
 // list all the suppliers
 app.get("/", (req, res) => {

@@ -1,0 +1,15 @@
+# Ignore the .env file
+.env
+
+# Ignore node_modules (optional, as it will be installed in the container)
+node_modules
+
+# Ignore logs
+*.log
+
+# Ignore other unnecessary files
+.dockerignore
+.git
+.gitignore
+npm-debug.log
+.DS_Store
